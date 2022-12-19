@@ -5,6 +5,9 @@
 #include <QWidget>
 #include <QTimer>
 
+#define SDL_WINDOW_WIDTH 640
+#define SDL_WINDOW_HEIGHT 480
+
 class SDL2Widget : public QWidget
 {
 	Q_OBJECT    

@@ -16,7 +16,9 @@ int main(int argc,char* argv[])
      * to the SDL2Widget constructor.
      */
     QWidget* sdlWidgetContainer = new QWidget();
+    sdlWidgetContainer->setMaximumSize(640, 480);
     SDL2Widget* sdlWidget = new SDL2Widget(sdlWidgetContainer);
+    sdlWidget->setMaximumSize(640,480);
     QGridLayout *gridLayout = new QGridLayout();
     gridLayout->addWidget(sdlWidget);
     sdlWidgetContainer->setLayout(gridLayout);

@@ -1,4 +1,5 @@
 #include <SDL2Widget.h>
+#include <QtDebug>
 
 SDL2Widget::SDL2Widget(QWidget* parent) : QWidget(parent)
 {
@@ -20,6 +21,8 @@ SDL2Widget::SDL2Widget(QWidget* parent) : QWidget(parent)
 
     SDL_Init(SDL_INIT_EVERYTHING);
     sdlWindow = SDL_CreateWindowFrom((void*)this->winId());
+    SDL_SetWindowMaximumSize(sdlWindow, SDL_WINDOW_WIDTH, SDL_WINDOW_WIDTH);
+    SDL_SetWindowSize(sdlWindow, SDL_WINDOW_WIDTH, SDL_WINDOW_WIDTH);
     sdlRenderer = SDL_CreateRenderer(sdlWindow, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
     timer = new QTimer(this);
