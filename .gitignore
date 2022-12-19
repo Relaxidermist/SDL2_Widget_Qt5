@@ -1,0 +1,6 @@
+CMakeCache.txt
+Makefile
+*.cmake
+.vscode/
+CMakeFiles/
+sdl2_widgetqt5_autogen
